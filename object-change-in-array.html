@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="Author" content="Irfan Ali - irfan@iali.me" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>javascript- change the object name in array</title>
+</head>
+
+<body>
+<script>
+$(function(){
+var jsonObj = [{'Id':'1','Username':'Ray','FatherName':'Thompson'},  
+               {'Id':'2','Username':'Steve','FatherName':'Johnson'},
+               {'Id':'3','Username':'Albert','FatherName':'Einstein'}];
+
+for (var i=0; i<jsonObj.length; i++) {
+  if (jsonObj[i].Id == 3) {
+    jsonObj[i].Username = "Thomas";
+    break;
+  }
+}
+
+alert("New Username: " + jsonObj[2].Username);
+});
+</script>
+</body>
+</html>
